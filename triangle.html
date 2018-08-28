@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      margin: 50px auto 0;
+      border: 1px solid #cdcdcd;
+      position: relative;
+    }
+
+    .box::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      position: absolute;
+    }  
+    .top-grey::before {
+      border-left: 10px solid grey;
+      border-top: 10px solid grey;
+      border-right: 10px solid #fff;
+      border-bottom: 10px solid #fff;
+      transform: rotate(45deg);     
+      top: -10px;
+      left: 15px;
+    }
+
+    .right-top::before {
+      border-left: 10px solid #fff;
+      border-top: 10px solid red;
+      border-right: 10px solid red;
+      border-bottom: 10px solid #fff;
+      right: 0;
+    }
+
+    .top-white::before {
+      width: 20px;
+      height: 20px;
+      border-left: 1px solid #cdcdcd;
+      border-top: 1px solid #cdcdcd;
+      background: white;
+      transform: rotate(45deg);     
+      top: -11px;
+      left: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box top-grey"></div>
+  <div class="box right-top"></div>
+  <div class="box top-white"></div>
+</body>
+</html>
